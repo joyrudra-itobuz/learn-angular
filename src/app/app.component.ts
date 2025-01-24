@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { UserComponent } from './user/user.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [UserComponent],
+  imports: [UserComponent, CommentsComponent],
 })
 export class AppComponent {
   items = [1];
@@ -25,13 +26,13 @@ export class AppComponent {
   isEditable = true;
   imageURL =
     'https://images.pexels.com/photos/24029951/pexels-photo-24029951/free-photo-of-case-and-earbuds.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+
   onMouseOver() {
     this.message = 'Way to go 🚀';
   }
   onMouseLeave() {
     this.message = 'Mouse Over to see the message';
   }
-
   addItem(item: number) {
     this.items.push(item);
   }
