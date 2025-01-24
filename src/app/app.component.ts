@@ -8,6 +8,7 @@ import { UserComponent } from './user/user.component';
   imports: [UserComponent],
 })
 export class AppComponent {
+  items = [1];
   message = 'Mouse Over to see the message';
   operatingSystems = [
     { id: 'win', name: 'Windows' },
@@ -29,5 +30,9 @@ export class AppComponent {
   }
   onMouseLeave() {
     this.message = 'Mouse Over to see the message';
+  }
+
+  addItem(item: number) {
+    this.items.push(item);
   }
 }

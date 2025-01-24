@@ -21,15 +21,11 @@
     }
   </div>
 
-  <div
-    class="cursor-pointer"
-    (mouseover)="onMouseOver()"
-    (mouseleave)="onMouseLeave()"
-  >
+  <div (mouseover)="onMouseOver()" (mouseleave)="onMouseLeave()">
     {{ message }}
   </div>
 
-  <app-user occupation="Developer">
-    <div>Slot Content</div>
-  </app-user>
+  <app-user occupation="Developer" (incrementCountEvent)="addItem($event)" />
+
+  <p>Items Length : {{ items.length }}</p>
 </section>
