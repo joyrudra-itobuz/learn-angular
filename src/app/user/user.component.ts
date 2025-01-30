@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core'
 
 @Component({
   selector: 'app-user',
@@ -15,12 +15,12 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   `,
 })
 export class UserComponent {
-  @Input() occupation = '';
-  @Output() incrementCountEvent = new EventEmitter<number>();
-  count = 1;
+  @Input() occupation = ''
+  @Output() incrementCountEvent = new EventEmitter<number>()
+  count = 1
 
   addItemEvent() {
-    this.count++;
-    this.incrementCountEvent.emit(this.count);
+    this.count++
+    this.incrementCountEvent.emit(this.count)
   }
 }
